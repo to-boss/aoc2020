@@ -5,6 +5,7 @@ mod day04;
 mod day05;
 mod day06;
 mod day07;
+mod day08;
 
 const SOLVE_ALL: bool = false;
 
@@ -25,4 +26,6 @@ fn main() {
         day07::answer_1();
         day07::answer_2();
     }
+    day08::answer_1();
+    day08::answer_2();
 }
