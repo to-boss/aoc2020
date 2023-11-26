@@ -1,6 +1,6 @@
 use std::{collections::HashMap, fs, str::FromStr};
 
-fn get_input() -> String {
+fn input() -> String {
     fs::read_to_string("input/day07.txt").unwrap()
 }
 
@@ -67,12 +67,12 @@ fn lookup(
 }
 
 pub fn answer_1() {
-    let input = get_input();
+    let input = input();
     println!("day07 part1: {}", solve_1(&input));
 }
 
 pub fn answer_2() {
-    let input = get_input();
+    let input = input();
     println!("day07 part2: {}", solve_2(&input));
 }
 

@@ -1,6 +1,6 @@
 use std::fs;
 
-fn get_input() -> String {
+fn input() -> String {
     fs::read_to_string("input/day05.txt").unwrap()
 }
 
@@ -31,7 +31,7 @@ fn solve_1(input: &str) -> usize {
 }
 
 pub fn answer_1() {
-    let input = get_input();
+    let input = input();
     let seats: Vec<_> = input.lines().map(|l| solve_1(l)).collect();
     let max_id = seats.into_iter().max().unwrap();
 
@@ -39,7 +39,7 @@ pub fn answer_1() {
 }
 
 pub fn answer_2() {
-    let input = get_input();
+    let input = input();
     let mut seats: Vec<_> = input.lines().map(|l| solve_1(l)).collect();
     seats.sort();
 

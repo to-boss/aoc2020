@@ -145,12 +145,12 @@ fn parse_input(input: &str) -> Vec<Passport> {
     passports
 }
 
-fn get_input() -> String {
+fn input() -> String {
     fs::read_to_string("input/day04.txt").unwrap()
 }
 
 fn solve_1() -> usize {
-    let input = get_input();
+    let input = input();
     let passports = parse_input(&input);
     passports.iter().fold(
         0,
@@ -159,7 +159,7 @@ fn solve_1() -> usize {
 }
 
 fn solve_2() -> usize {
-    let input = get_input();
+    let input = input();
     let passports = parse_input(&input);
     passports.iter().fold(
         0,

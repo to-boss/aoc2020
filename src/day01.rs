@@ -1,6 +1,6 @@
 use std::fs;
 
-pub fn get_input() -> Vec<usize> {
+pub fn input() -> Vec<usize> {
     let input = fs::read_to_string("input/day01.txt").unwrap();
     input
         .lines()
@@ -41,12 +41,12 @@ fn solve_2(input: Vec<usize>, wanted: usize) -> Option<usize> {
 }
 
 pub fn answer_1() {
-    let input = get_input();
+    let input = input();
     println!("day01 part1: {:?}", solve_1(input, 2020));
 }
 
 pub fn answer_2() {
-    let input = get_input();
+    let input = input();
     println!("day01 part2: {:?}", solve_2(input, 2020));
 }
 

@@ -95,7 +95,7 @@ impl Cell {
     }
 }
 
-pub fn get_input() -> Vec<Vec<Cell>> {
+pub fn input() -> Vec<Vec<Cell>> {
     let input = fs::read_to_string("input/day03.txt").unwrap();
     input
         .lines()
@@ -120,12 +120,12 @@ pub fn solve_2(input: Vec<Vec<Cell>>) -> usize {
 }
 
 pub fn answer_1() {
-    let input = get_input();
+    let input = input();
     println!("day03 part1: {}", solve_1(input));
 }
 
 pub fn answer_2() {
-    let input = get_input();
+    let input = input();
     println!("day03 part2: {}", solve_2(input));
 }
 

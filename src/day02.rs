@@ -61,7 +61,7 @@ impl FromStr for Policy {
     }
 }
 
-pub fn get_input() -> Vec<Policy> {
+pub fn input() -> Vec<Policy> {
     let input = fs::read_to_string("input/day02.txt").unwrap();
     input
         .lines()
@@ -85,12 +85,12 @@ pub fn solve_2(input: Vec<Policy>) -> usize {
 }
 
 pub fn answer_1() {
-    let input = get_input();
+    let input = input();
     println!("day02 part1: {:?}", solve_1(input));
 }
 
 pub fn answer_2() {
-    let input = get_input();
+    let input = input();
     println!("day02 part2: {:?}", solve_2(input));
 }
 
