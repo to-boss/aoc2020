@@ -129,11 +129,10 @@ fn solve_2(input: &str) -> i32 {
     for console in consoles.iter_mut() {
         loop {
             let res = console.step();
-            if let (Some(_), None) = res {
-                break;
-            }
-            if let (None, Some(val)) = res {
-                return val;
+            match res {
+                (None, Some(val)) => return val,
+                (Some(_), None) => break,
+                _ => (),
             }
         }
     }
