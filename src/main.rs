@@ -30,4 +30,5 @@ fn main() {
         day08::answer_2();
     }
     day09::answer_1();
+    day09::answer_2();
 }
